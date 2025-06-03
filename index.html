@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐣🐤🐥 Dịch truyện convert by Lưu Vân 🐣🐤🐥</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a; /* slate-900 */
+        color: #f1f5f9; /* slate-100 */
+        position: relative; /* Needed for z-index of pseudo-elements */
+        overflow-x: hidden; /* Prevent horizontal scroll if effects are too wide */
+      }
+      /* Custom scrollbar for better aesthetics in dark mode */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; /* slate-800 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; /* slate-700 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; /* slate-600 */
+      }
+
+      /* Side Effects - Tiên Hiệp Theme */
+      body::before,
+      body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 25vw; /* Adjust width as needed */
+        max-width: 350px; /* Max width for the effect */
+        z-index: -1; /* Behind all content */
+        pointer-events: none;
+        display: none; /* Initially hidden, shown via media query */
+      }
+
+      body::before { /* Left side effect */
+        left: 0;
+        background-image: 
+          radial-gradient(ellipse at 0% 20%, rgba(56, 189, 248, 0.35) 0%, transparent 60%), /* sky-500 base, increased alpha */
+          radial-gradient(ellipse at 20% 70%, rgba(34, 211, 238, 0.3) 0%, transparent 50%),  /* cyan-400 base, increased alpha */
+          radial-gradient(ellipse at 10% 90%, rgba(165, 243, 252, 0.25) 0%, transparent 40%); /* cyan-200 base, increased alpha */
+      }
+
+      body::after { /* Right side effect */
+        right: 0;
+        background-image: 
+          radial-gradient(ellipse at 100% 30%, rgba(129, 140, 248, 0.35) 0%, transparent 60%), /* indigo-400 variant, increased alpha */
+          radial-gradient(ellipse at 80% 80%, rgba(192, 132, 252, 0.3) 0%, transparent 50%), /* purple-400 variant, increased alpha */
+          radial-gradient(ellipse at 90% 10%, rgba(250, 204, 21, 0.2) 0%, transparent 40%); /* yellow-400/gold hint, increased alpha */
+      }
+
+      @keyframes etherealFlowLeft {
+        0% {
+          transform: translateY(-5%) translateX(-10%);
+          opacity: 0.5;  /* Increased opacity */
+        }
+        50% {
+          transform: translateY(0%) translateX(0%);
+          opacity: 0.75; /* Increased opacity */
+        }
+        100% {
+          transform: translateY(5%) translateX(-5%);
+          opacity: 0.45; /* Increased opacity */
+        }
+      }
+
+      @keyframes etherealFlowRight {
+        0% {
+          transform: translateY(5%) translateX(10%);
+          opacity: 0.5;  /* Increased opacity */
+        }
+        50% {
+          transform: translateY(-2%) translateX(-2%);
+           opacity: 0.8;  /* Increased opacity */
+        }
+        100% {
+          transform: translateY(-5%) translateX(5%);
+          opacity: 0.45; /* Increased opacity */
+        }
+      }
+
+      /* Media query to show effects only on larger screens */
+      @media (min-width: 1280px) { /* Tailwind 'xl' breakpoint */
+        body::before {
+          display: block;
+          animation: etherealFlowLeft 35s linear infinite alternate;
+        }
+        body::after {
+          display: block;
+          animation: etherealFlowRight 40s linear infinite alternate;
+        }
+      }
+
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.3.0",
+    "firebase/": "https://esm.sh/firebase@^11.8.1/",
+    "jszip": "https://esm.sh/jszip@3.10.1",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@4.4.168"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

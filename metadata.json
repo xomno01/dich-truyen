@@ -1,0 +1,5 @@
+{
+  "name": "AI Text Converter (User API Key)",
+  "description": "A web application to convert text using AI models. Users provide their own Gemini API key. No Firebase authentication.",
+  "requestFramePermissions": []
+}

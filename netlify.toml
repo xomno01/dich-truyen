@@ -1,0 +1,14 @@
+[[headers]]
+  for = "/*.tsx"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+[[headers]]
+  for = "/*.ts"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+# Nếu bạn có các assets khác muốn cache lâu hơn, có thể thêm vào đây
+# [[headers]]
+#   for = "/assets/*"
+#   [headers.values]
+#     Cache-Control = "public, max-age=31536000, immutable"
